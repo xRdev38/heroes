@@ -10,9 +10,10 @@ export default class ApiService extends VueAxios {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        Authorization: `Token ${JwtService.getToken()}`,
+        // Authorization: `Token ${JwtService.getToken()}`,
       },
     };
+    console.log(AXIOS_OPTIONS);
     super(AXIOS_OPTIONS);
   }
 
