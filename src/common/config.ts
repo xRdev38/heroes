@@ -1,8 +1,9 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-process.env.VUE_APP_VERSION = require('../../package.json').version;
-
 export const Configuration = {
   TITLE: process.env.VUE_APP_TITLE,
-  API_URL: process.env.VUE_APP_API_URL,
+  API_KEY: process.env.VUE_APP_API_KEY,
+  API_BASE_URL: process.env.VUE_APP_API_URL,
+  API_VERSION: process.env.VUE_APP_API_VERSION,
+  API_ACCESS: process.env.VUE_APP_API_ACCESS_VERSION,
+  API_URL: `${process.env.VUE_APP_API_URL}/${process.env.VUE_APP_API_VERSION}/${process.env.VUE_APP_API_ACCESS_VERSION}`
 };
 export default Configuration;
