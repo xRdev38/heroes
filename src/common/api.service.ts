@@ -16,7 +16,7 @@ export default class ApiService extends VueAxios {
     super(AXIOS_OPTIONS);
   }
 
-  async request(type: Method, url: string, data: never) {
+  async request(type: Method, url: string, data: any) {
     let promise = null;
     switch (type) {
       case "GET":
